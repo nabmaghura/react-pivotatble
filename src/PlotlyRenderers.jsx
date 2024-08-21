@@ -29,7 +29,7 @@ function makeRenderer(
       const numInputs =
         this.props.aggregators[fullAggName]([])().numInputs || 0;
       if (numInputs !== 0) {
-        fullAggName += ` of ${this.props.vals.slice(0, numInputs).join(', ')}`;
+        fullAggName += ` de ${this.props.vals.slice(0, numInputs).join(', ')}`;
       }
 
       const data = traceKeys.map(traceKey => {
@@ -66,10 +66,10 @@ function makeRenderer(
         ? this.props.cols.join('-')
         : this.props.rows.join('-');
       if (hAxisTitle !== '') {
-        titleText += ` vs ${hAxisTitle}`;
+        titleText += ` par ${hAxisTitle}`;
       }
       if (groupByTitle !== '') {
-        titleText += ` by ${groupByTitle}`;
+        titleText += ` par ${groupByTitle}`;
       }
 
       const layout = {
@@ -163,7 +163,7 @@ function makeScatterRenderer(PlotlyComponent) {
       });
 
       const layout = {
-        title: this.props.rows.join('-') + ' vs ' + this.props.cols.join('-'),
+        title: this.props.rows.join('-') + ' par ' + this.props.cols.join('-'),
         hovermode: 'closest',
         /* eslint-disable no-magic-numbers */
         xaxis: {title: this.props.cols.join('-'), automargin: true},

@@ -1,21 +1,8 @@
-/*
-SAS2412
 .pvtUi {
     color: #2a3f5f;
     font-family: Verdana;
     border-collapse: collapse;
 }
-*/
-
-.pvtUi {
-    color: #2a3f5f;
-    font-family: Verdana;
-    border-collapse: collapse;
-    display: block;
-    width: 100%;
-    overflow: auto;
-}
-
 .pvtUi select {
     user-select: none;
     -webkit-user-select: none;
@@ -29,10 +16,7 @@ SAS2412
 }
 
 table.pvtTable {
-    /* font-size: 12pt; */
-    /* font-size: 16px; */
-	/* smaller font AGB */
-	font-size: 8pt;
+    font-size: 8pt;
     text-align: left;
     border-collapse: collapse;
     margin-top: 3px;
@@ -41,11 +25,9 @@ table.pvtTable {
 }
 table.pvtTable thead tr th,
 table.pvtTable tbody tr th {
-    /* background-color: #ebf0f8; */
+    background-color: #ebf0f8;
     border: 1px solid #c8d4e3;
-	/* smaller font AGB */
-    /* font-size: 12pt; */
-	font-size: 8pt;
+    font-size: 8pt;
     padding: 5px;
 }
 
@@ -63,20 +45,6 @@ table.pvtTable tbody tr td {
     border: 1px solid #c8d4e3;
     vertical-align: top;
     text-align: right;
-}
-
-/* AGB The next 3 are for highlighting cell to hover/click */
-table.pvtTable tbody tr td:hover {
-    background: #e2e8f0;
-    border-color: #a2b1c6;
-}
-
-table.pvtTable tbody tr td:focus {
-	background-color: #ffdb3a;
-}
-/* AGB yellow Highlight cell when clicked */
-table.pvtTable tbody tr td:active {
-	background-color: yellow;
 }
 
 .pvtTotal,
@@ -98,26 +66,10 @@ table.pvtTable tbody tr td:active {
     -ms-user-select: none;
 }
 
-/* separated pvtVals AGB and SAS2412 */
-.pvtAxisContainer {
-	border: 1px solid #a2b1c6;
-    /* background: #f2f5fa; */
-    padding: 5px;
-    min-width: 20px;
-    min-height: 20px;
-}
-/* Added AGB and SAS2412 */
-.pvtScroll {
-	display: flex;
-	flex-wrap: wrap;
-    /* width: 100%; */
-	max-height: 500px;
-    overflow: auto;
-}
-
+.pvtAxisContainer,
 .pvtVals {
     border: 1px solid #a2b1c6;
-    /* background: #f2f5fa; */
+    background: #f2f5fa;
     padding: 5px;
     min-width: 20px;
     min-height: 20px;
@@ -142,14 +94,7 @@ table.pvtTable tbody tr td:active {
     float: right;
     color: #a2b1c6;
 }
-
-.pvtDropdownCurrent li {
-    padding: 5px;
-    font-size: 16px;
-    list-style-type: none;
-}
-
-.pvtDropdownCurrent{
+.pvtDropdownCurrent {
     text-align: left;
     border: 1px solid #a2b1c6;
     border-radius: 4px;
@@ -195,10 +140,6 @@ table.pvtTable tbody tr td:active {
     height: 35px;
 }
 
-.pvtAxisContainer{
-    vertical-align: top;
-}
-
 .pvtAxisContainer li {
     padding: 8px 6px;
     list-style-type: none;
@@ -215,20 +156,11 @@ table.pvtTable tbody tr td:active {
     display: none;
 }
 
-.pvtCategoryAttrHolder {
-    height: 5px;
-    width: 100%;
-    color: transparent;
-    background: #b2cfebcc;
-}
-
 .pvtAxisContainer li span.pvtAttr {
     -webkit-text-size-adjust: 100%;
     background: #f3f6fa;
     border: 1px solid #c8d4e3;
     padding: 2px 5px;
-    /* AGB reduce font size from 16*/
-	font-size: 12px;
     white-space: nowrap;
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
@@ -245,7 +177,7 @@ table.pvtTable tbody tr td:active {
     color: #506784;
 }
 
-.pvtHorizList li, .modal-group-div li {
+.pvtHorizList li {
     display: inline-block;
 }
 .pvtVertList {
@@ -287,7 +219,6 @@ table.pvtTable tbody tr td:active {
     border-color: #c8d4e3;
     font-size: 14px;
     margin: 3px;
-    cursor: pointer;
     transition: 0.34s all cubic-bezier(0.19, 1, 0.22, 1);
     text-decoration: none !important;
 }
@@ -358,7 +289,7 @@ table.pvtTable tbody tr td:active {
     margin: 0;
     margin-bottom: 1px;
     padding: 3px;
-    cursor: pointer;
+    cursor: default;
 }
 
 .pvtCheckContainer p.selected {
@@ -373,11 +304,6 @@ table.pvtTable tbody tr td:active {
     padding-left: 5px;
     cursor: pointer;
 }
-
-.pvtOnly:hover{
-    color: #000000;
-    font-weight: bolder;
-} 
 
 .pvtOnlySpacer {
     display: block;
@@ -394,477 +320,4 @@ table.pvtTable tbody tr td:active {
 
 .pvtRendererArea {
     padding: 5px;
-}
-
-.pvtSubCategoryArea{
-    margin-top: 5px;
-    padding: 10px;
-}
-
-.pvtCategoryArea{
-    padding: 0px;
-    width: 100%;
-    min-height: 150px;
-    max-height: 400px;
-}
-
-.pvtCategoryArea > table {
-    height: 100%;
-}
-
-.pvtSubCategoryArea > table {
-    height: 100%;
-}
-
-
-.pvtParentAttrArea{
-    padding-bottom: 10px;
-}
-
-.pvtOmitTd{
-    padding: 5px;
-}
-
-.pvtTableOptionLabel{
-    font-size: 16px;
-    padding: 10px 5px 0px 5px;
-}
-
-.pvtCategoryDiv {
-    flex-basis: 33.3%;
-    max-height: 200px;
-    border: 1px solid #c8d4e3;
-    overflow-y: auto;
-    flex-grow: 1;
-    padding: 10px;
-}
-
-.pvtAttrsContainer {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    max-height: 400px;
-    overflow-y: auto;
-}
-
-.pvtButtonContainer{
-    margin-top: 10px;
-    margin-bottom: 10px;
-}
-
-.pvtUnused {
-    position: relative;
-}
-
-.pvtCategoryContainer {
-    display: flex;
-    flex-direction: column;
-    flex-shrink: 0;
-    max-height: 400px;
-    overflow-y: auto;
-}
-
-
-/* .pvtCateogryCard{
-    position: static;
-} */
-
-.pvtCateogryCard{
-    position: static;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    min-width: 0;
-    word-wrap: break-word;
-    background-color: #fff;
-    background-clip: border-box;
-    /* border: 1px solid rgba(0, 0, 0, 0.125);
-    border-radius: 0.25rem; */
-}
-/* Dropdown menus */
-.dropdown-submenu {
-    position: relative;
-  }
-  
-.dropdown-submenu .dropdown-menu {
-    top: 0;
-    left: 100%;
-    margin-top: -1px;
-}
-
-
-/* Adjust button font-size */
-
-.dropdown, .dropdown > .btn, .btn, button, .pvtButtonContainer > .btn{
-    font-size: 14px;
-}
-
-/* Dropdown tests */
-
-.dropdown-item{
-    font-size: 14px;
-    cursor: pointer;
-    padding: 0px;
-}
-
-
-
-.nav-item, .dropdown-menu  > li {
-    display: block;
-    cursor: pointer;
-}
-
-
-.pvtUi h4 {
-    font-size: 16px;
-}
-
-/** Tooltip **/
-
-.tooltip {
-    position: relative;
-    display: inline-block;
-    border-bottom: 1px dotted black;
-  }
-  
-  .tooltip .tooltiptext {
-    visibility: hidden;
-    background-color: black;
-    color: #fff;
-    text-align: center;
-    border-radius: 6px;
-    padding: 5px 8px 5px 8px;
-    position: absolute;
-    z-index: 1;
-    bottom: 150%;
-    left: 50%;
-    margin-left: -60px;
-    font-size: 14px;
-  }
-  
-  .tooltip .tooltiptext::after {
-    content: "";
-    position: absolute;
-    top: 100%;
-    left: 50%;
-    margin-left: -5px;
-    border-width: 5px;
-    border-style: solid;
-    border-color: black transparent transparent transparent;
-  }
-  
-
-/*
-  customized card 
-*/
-.card-header {
-    padding: 10px;
-    font-size: 16px;
-    font-weight: 800;
-    background: #b2cfebcc; /**62A7EC**/
-    color: #3f4f75;
-
-}
-
-.card-title{
-    display: inline-block;
-    cursor: pointer;
-    font-size:  14px;
- }
- 
-
-
-/*
-Search Icon
-*/
-
-.icon-search {
-    cursor: pointer;
-}
-
-/*
-Dropdown Menu - Bootstrap
-*/
-.dropdown-item {
-    display: block;
-    width: 100%;
-    padding: .25rem 1.5rem;
-    clear: both;
-    font-weight: 400;
-    color: #212529;
-    text-align: inherit;
-    white-space: nowrap;
-    background-color: transparent;
-    border: 0;
-}
-
-.dropdown-menu {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    z-index: 1000;
-    display: none;
-    float: left;
-    min-width: 10rem;
-    padding: .5rem 0;
-    margin: .125rem 0 0;
-    font-size: 1rem;
-    color: #212529;
-    text-align: left;
-    list-style: none;
-    background-color: #fff;
-    background-clip: padding-box;
-    border: 1px solid rgba(0,0,0,.15);
-    border-radius: .25rem;
-    position: absolute;
-
-}
-
-.dropleft > .dropdown-menu {
-    transform: translate3d(-197px, 0px, 0px);
-    top: 0px;
-    left: 0px;
-    will-change: transform;
-}
-
-.dropdown{
-    position: relative;
-}
-
-.dropdown-toggle, .attr-num-input{
-    position: relative;
-    background: #f3f6fa7a;
-    padding: 5px 10px 5px 10px;
-    font-size: 12px;
-    border: transparent;
-    margin: 0 5px 0 5px;
-    font-weight: 700;
-    border-radius: 5px;
-}
-
-
-.dropdown-toggle:hover, .dropdown-toggle:active, .dropdown-toggle:focus, .dropdown-toggle:active:focus{
-    /* border: transparent; */
-    outline-color: transparent;
-    box-shadow: 0 0 0 0.2rem rgba(108,117,125,.5);
-}
-
-
-.btn-custom-primary{
-
-    background-color: #3f4f75;
-    border: 0;
-    padding: 5px 10px 5px 10px;
-    font-size: 16px;
-    color:white;
-    font-weight: 800;
-    border-radius: 5px;
-}
-
-/* custom component */
-
-.attr-num-input{
-    width: 40px;
-}
-
-.attr-num-input:focus, .attr-num-input:active{
-    outline-color: transparent;
-    box-shadow: 0 0 0 0.2rem rgba(108,117,125,.5);
-}
-
-
-/* The Modal (background) */
-.modal {
-    /* display: none; Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1000; /* Sit on top */
-    padding-top: 100px; /* Location of the box */
-    left: 0;
-    top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-  }
-  
-  /* Modal Content */
-  .modal-content {
-    background-color: #fefefe;
-    margin: auto;
-    padding: 20px;
-    border: 1px solid #888;
-    width: 80%;
-  }
-  
-  /* The Close Button */
-  .close {
-    color: #aaaaaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-  }
-  
-  .close:hover,
-  .close:focus {
-    color: #000;
-    text-decoration: none;
-    cursor: pointer;
-  }
-
-
-  .modal-header{
-      min-height: 20px;
-  }
-
-  .modal-group-div{
-    border-bottom: 1px solid #a2b1c6;
-    border-top: 1px solid #a2b1c6;
-    padding: 10px;
-    /* margin: 10px; */
-    display: block;
-  }
-
-  .modal-attr-span{
-    background: #f3f6fa;
-    border: 1px solid #c8d4e3;
-    padding: 2px 5px;
-    margin: 5px;
-    font-size: 12px;
-    white-space: nowrap;
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    border-radius: 5px;
-    cursor: move;
-  }
-
-  .pvtSetting-left  .card-header,  .pvtSetting-right .card-header{
-      background: #f3f6fa;
-      border-bottom: 1px solid #a2b1c6;
-      height: 28px;
-  }
-
-  .pvtSetting-left .card-title, .pvtSetting-right .card-title{
-      color: #666767de;
-  }
-
-  .ungrouped-div{
-      border-top: 0px;
-      border-bottom: 0px;
-      border-right: 1px solid #a2b1c6;
-      max-height: 200px;
-      overflow-y: auto;
-     
-  }
-
-  .modal-group-div.ungrouped-div{
-      background-color: rgb(226 226 226 / 15%);
-  }
-
-  .config-card{
-      padding: 10px;
-  }
-
-  .label{
-      font-size: 14px;
-      min-width: 200px;
-      display: inline-block;
-      text-align: center;
-      margin: 2px 2px;
-      padding: 5px;
-      /* min-width: 100px; */
-  }
-
-
-  /* color picker */
-
-  .picker {
-    position: relative;
-    display: inline-block;
-  }
-  
-  .swatch {
-    width: 26px;
-    height: 26px;
-    /* border-radius: 8px; */
-    border: 1px solid #a2b1c6;
-    /* box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1), inset 0 0 0 1px rgba(0, 0, 0, 0.1); */
-    cursor: pointer;
-    display: inline-block;
-    margin: 0em;
-    vertical-align: middle;
-    
-   
-  }
-  
- 
-  .form-row{
-      margin: 10px 5px 10px 5px;
-  }
-
-  .color-picker {
-      background-color: rgb(243 246 250);
-      margin: 5px;
-      padding: 10px;
-  }
-
-  .color-picker > .react-colorful {
-      margin: 20px;
-    /* margin: 5px auto;  */
-    /* padding: 20px 5px; */
-  }
-
-  .pvtSetting-left, .pvtSetting-right{
-      padding: 0px;
- 
-      /* border-radius: 0px; */
-  }
-
-  .pvtSetting-left{
-      border-right-width: 0px;
-  }
-
-  .pvtSetting-right{
-      border-left-width: 0px;
-  }
-
-.pvtSettingButton{
-      background-color:#66676799;
-      border: 1px solid transparent;
-      color: white;
-      vertical-align: middle;
-      cursor: pointer;
-      /* border: transparent; */
-      /* margin: 0 5px 0 5px; */
-      font-weight: 700;
-      border-radius: 5px;
-      padding: 5px;
-      /* margin: 5px; */
-  }
-
-.pvtButton.primary{
-    background-color: #3f4f75;
-    color: white;
-}
-
-
-.paginationButtonDiv {
-    min-height: 10px;
-    margin: 3px;
-    display: flex;
-    justify-content: flex-end;
-}
-
-
-.pageDiv {
-    color: #506784;
-    border-radius: 5px;
-    padding: 3px 6px;
-    background: #f2f5fa;
-    border-color: #c8d4e3;
-    font-size: 14px;
-    margin: 3px;
-    transition: 0.34s all cubic-bezier(0.19, 1, 0.22, 1);
-    text-decoration: none !important
 }
